@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventLink - Connect with Top Event Vendors</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+ <nav class="navbar">
+  <!-- Logo Section -->
+  <div class="navbar-logo">
+    <a href="#">EventLink</a>
+  </div>
+
+  <!-- Menu Section -->
+  <div class="navbar-links">
+    <div class="dropdown">
+      <button class="dropbtn">Explore Services <i class="fa fa-chevron-down"></i></button>
+      <div class="dropdown-content">
+        <!-- Interior Dropdown -->
+        <div class="dropdown-category">
+          <h4>Interior</h4>
+          <a href="#" class="has-submenu" id="home-repairs">Home Repairs & Maintenance</a>
+          <div class="submenu" id="home-repair-services">
+            <a href="#">Plumbing</a>
+            <a href="#">Locksmiths</a>
+            <a href="#">Appliance Repairs</a>
+            <a href="#">Garage Door Repairs</a>
+            <a href="#">Handyman</a>
+            <a href="#">Furnace Repairs</a>
+            <a href="#">HVAC</a>
+            <a href="#">Electrical</a>
+            <a href="#">Windows & Doors</a>
+          </div>
+
+          <a href="#" class="has-submenu" id="cleaning">Cleaning & Organization</a>
+          <div class="submenu" id="cleaning-services">
+            <a href="#">House Cleaning</a>
+            <a href="#">Carpet Cleaning</a>
+            <a href="#">Upholstery Cleaning</a>
+            <a href="#">Home Organization</a>
+            <a href="#">Deep Cleaning</a>
+            <a href="#">Junk Removal</a>
+            <a href="#">Duct & Vent Cleaning</a>
+            <a href="#">Pool Cleaning</a>
+            <a href="#">Commercial Cleaners</a>
+          </div>
+
+          <a href="#" class="has-submenu" id="renovations">Renovations & Upgrades</a>
+          <div class="submenu" id="renovation-services">
+            <a href="#">General Contracting</a>
+            <a href="#">Carpenters</a>
+            <a href="#">Bathroom Remodeling</a>
+            <a href="#">Kitchen Remodeling</a>
+            <a href="#">Flooring Installation</a>
+            <a href="#">Interior Design</a>
+            <a href="#">Carpet Installation</a>
+            <a href="#">Interior Painting</a>
+            <a href="#">Basement Remodeling</a>
+          </div>
+        </div>
+
+        <!-- Exterior Dropdown -->
+        <div class="dropdown-category">
+          <h4>Exterior</h4>
+          <a href="#" class="has-submenu" id="exterior-home-care">Exterior Home Care</a>
+          <div class="submenu" id="exterior-home-care-services">
+            <a href="#">Roofing</a>
+            <a href="#">House Painting</a>
+            <a href="#">Window Washing</a>
+            <a href="#">Chimney Sweeps</a>
+            <a href="#">Pools</a>
+            <a href="#">Gutter Cleaning</a>
+            <a href="#">Deck Contractors</a>
+            <a href="#">Siding</a>
+            <a href="#">Concrete & Masonry</a>
+          </div>
+
+          <a href="#" class="has-submenu" id="landscaping">Landscaping & Outdoor Services</a>
+          <div class="submenu" id="landscaping-services">
+            <a href="#">Lawn Care</a>
+            <a href="#">Landscaping Design</a>
+            <a href="#">Gardening</a>
+            <a href="#">Tree Trimming</a>
+            <a href="#">Sprinkler System Repairs</a>
+            <a href="#">Artificial Turf Installation</a>
+            <a href="#">Stump Grinding</a>
+            <a href="#">Sod Installation</a>
+            <a href="#">Arborists</a>
+          </div>
+        </div>
+
+        <!-- More Services Dropdown -->
+        <div class="dropdown-category">
+          <h4>More Services</h4>
+          <a href="#" class="has-submenu" id="moving">Moving</a>
+          <div class="submenu" id="moving-services">
+            <a href="#">Local Movers</a>
+            <a href="#">Long Distance Movers</a>
+            <a href="#">Piano Movers</a>
+            <a href="#">Packing & Unpacking</a>
+            <a href="#">Move In & Move Out Cleaning</a>
+            <a href="#">Storage Companies</a>
+            <a href="#">Furniture Movers</a>
+          </div>
+
+          <a href="#" class="has-submenu" id="installation">Installation & Assembly</a>
+          <div class="submenu" id="installation-services">
+            <a href="#">Holiday Light Hanging</a>
+            <a href="#">TV Mounting</a>
+            <a href="#">Security Camera Installation</a>
+            <a href="#">Appliance Installation</a>
+            <a href="#">Furniture Assembly</a>
+            <a href="#">Ceiling Fan Installation</a>
+            <a href="#">Generator Installation</a>
+            <a href="#">Art & Picture Hanging</a>
+            <a href="#">Gym Equipment Assembly</a>
+          </div>
+
+          <a href="#" class="has-submenu" id="pest-control">Pest Control</a>
+          <div class="submenu" id="pest-control-services">
+            <a href="#">Pest Control</a>
+            <a href="#">Mosquito Control</a>
+            <a href="#">Rodent Control</a>
+            <a href="#">Bee Removal</a>
+            <a href="#">Bed Bug Exterminators</a>
+            <a href="#">Wasp Nest Removal</a>
+            <a href="#">Termites</a>
+            <a href="#">Dead Animal Removal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#">Join as a Pro</a>
+    <a href="#">Login</a>
+    <button id="sign-up-button">Sign Up</button>
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+  </div>
+</nav>
+
+<!-- Sign-Up Form (Initially Hidden) -->
+  <div class="sign-up-form" id="sign-up-form">
+    <h2>Create your account</h2>
+    <form>
+      <label for="first-name">First name</label>
+      <input type="text" id="first-name" name="first-name" required />
+
+      <label for="last-name">Last name</label>
+      <input type="text" id="last-name" name="last-name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <p>Your password must be:</p>
+      <ul>
+        <li>be 8 to 72 characters long</li>
+        <li>not contain your name or email</li>
+        <li>not be commonly used, easily guessed, or contain any variation of the word "EventLink"</li>
+      </ul>
+
+      <label for="remember-me">
+        <input type="checkbox" id="remember-me" name="remember-me" />
+        Remember me
+      </label>
+
+      <button type="submit">Create Account</button>
+    </form>
+    <p>Or</p>
+    <div class="social-login">
+      <button>Sign up with Facebook</button>
+      <button>Sign up with Google</button>
+    </div>
+    <p>Already have an account? <a href="#">Log in</a></p>
+  </div>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1>Find trusted vendors for any event</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="What service do you need?" />
+      <input type="text" placeholder="Your location (e.g., Nairobi)" />
+      <button>Search</button>
+    </div>
+    <!-- Add the new text here -->
+    <p class="projects-completed">Over 90 million projects completed nationwide • Backed by the EventLink Guarantee</p>
+  
+  <img src="IMG1.png" alt="Home repair image" class="hero-image" />
+  </div>
+</header>
+
+<!-- New Section: Popular Services Near Your Area -->
+<section class="popular-services">
+  <h2>Popular services near Your Area</h2>
+  <div class="service-cards">
+    <!-- Example Service Card 1 -->
+    <div class="service-card">
+      <i class="fas fa-broom"></i>
+      <p>House cleaning</p>
+    </div>
+    <!-- Example Service Card 2 -->
+    <div class="service-card">
+      <i class="fas fa-tools"></i>
+      <p>Handyman</p>
+    </div>
+    <!-- Example Service Card 3 -->
+    <div class="service-card">
+      <i class="fas fa-plug"></i>
+      <p>Electrical and wiring repair</p>
+    </div>
+    <!-- Example Service Card 4 -->
+    <div class="service-card">
+      <i class="fas fa-paint-brush"></i>
+      <p>Interior painting</p>
+    </div>
+    <!-- More Service Cards -->
+    <div class="service-card">
+      <i class="fas fa-trash"></i>
+      <p>Junk removal</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-truck"></i>
+      <p>Local moving (under 50 miles)</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-cogs"></i>
+      <p>Appliance repair or maintenance</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-warehouse"></i>
+      <p>Floor installation or replacement</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services You Might Also Like -->
+<section class="services-like">
+  <h2>Services you might also like</h2>
+  <div class="services-grid">
+    <!-- Service Item 1 -->
+    <div class="service-item">
+      <img src="roofing.jpg" alt="Roofing" />
+      <p>Roofing</p>
+    </div>
+    <!-- Service Item 2 -->
+    <div class="service-item">
+      <img src="web.jpg" alt="Freelance web designers" />
+      <p>Freelance web designers</p>
+    </div>
+    <!-- Service Item 3 -->
+    <div class="service-item">
+      <img src="handyman.jpg" alt="Handyman" />
+      <p>Handyman</p>
+    </div>
+  </div>
+</section>
+
+<!-- New Section: App Store and Google Play Links -->
+<section class="app-section">
+  <div class="app-content">
+    <div class="app-text">
+      <h2>The one app you need to get <span class="highlight">everything done</span>.</h2>
+      <p>From custom guides made just for you to effortless project planning, it's all here — in one free app.</p>
+    </div>
+    <div class="app-image">
+      <img src="phone.png" alt="App image" />
+    </div>
+  </div>
+
+</section>
+
+
+<!-- New Section: Explore More Projects -->
+<section class="explore-projects">
+  <h2>Explore more projects.</h2>
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="essential home service.jpg" alt="Essential home services" />
+      <p>Essential home services</p>
+    </div>
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="outdoor upkeep.jpg" alt="Outdoor upkeep" />
+      <p>Outdoor upkeep</p>
+    </div>
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="healthy at home.jpg" alt="Healthy at home" />
+      <p>Healthy at home</p>
+    </div>
+  </div>
+</section>
+
+<!-- New Navigation Bar: Below the Explore More Projects Section -->
+<nav class="navbar-main">
+  <ul class="navbar-list">
+    <li><a href="#">Home Maintenance</a></li>
+    <li><a href="#">Home Remodeling</a></li>
+    <li><a href="#">Weddings</a></li>
+    <li><a href="#">Events</a></li>
+    <li><a href="#">More</a></li>
+  </ul>
+</nav>
+
+
+<script src="script.js"></script>
+</body>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>EventLink</h2>
+      <p>Connecting you to trusted vendors for every event.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Become a Vendor</a></li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 EventLink. All rights reserved.</p>
+  </div>
+</footer>
+
+</html>
